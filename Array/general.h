@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
 
 template <typename T>
 std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {
@@ -34,6 +35,12 @@ bool operator==(const std::vector<T>& vec1, const std::vector<T>& vec2) {
 	}
 
 	return true;
+}
+
+template <typename T, typename U>
+std::ostream& operator<<(std::ostream& os, const std::pair<T, U> pr) {
+	os << pr.first << "," << pr.second;
+	return os;
 }
 
 #endif // GENERAL_H
