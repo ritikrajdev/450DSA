@@ -10,13 +10,14 @@ using namespace std;
 
 namespace ritik {
 	template <typename comparable>
-	pair<comparable, comparable> min_max(vector<comparable> vec) {
+	pair<comparable, comparable> min_max(const vector<comparable>& vec) {
 		if (vec.size() == 0)
 			throw invalid_argument("Vector Size is 0");
 
 		comparable min, max;
 		min = max = vec.at(0);
 		
+		// Min, Max
 		for (auto elm: vec) {
 			if (elm > max) max = elm;
 			else if (elm < min) min = elm;
