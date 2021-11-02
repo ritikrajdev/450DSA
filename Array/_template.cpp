@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+#include "general.h"
+
 using namespace std;
 
 namespace ritik {

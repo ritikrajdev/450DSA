@@ -4,7 +4,10 @@
 #include <iostream>
 #include <vector>
 #include <utility>
+#include <set>
 
+
+// Vector
 template <typename T>
 std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {
 	for (auto elm: vec)
@@ -13,9 +16,8 @@ std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {
 	return os;
 }
 
-
 template <typename T>
-std::istream& operator<<(std::istream& is, const std::vector<T>& vec) {
+std::istream& operator>>(std::istream& is, const std::vector<T>& vec) {
 	for (auto elm: vec)
 		is >> elm >> " ";
 
@@ -37,6 +39,18 @@ bool operator==(const std::vector<T>& vec1, const std::vector<T>& vec2) {
 	return true;
 }
 
+
+// Set
+template <typename T>
+std::ostream& operator<<(std::ostream& os, const std::set<T>& st) {
+	for (auto elm: st)
+		os << elm << " ";
+
+	return os;
+}
+
+
+// Pair
 template <typename T, typename U>
 std::ostream& operator<<(std::ostream& os, const std::pair<T, U> pr) {
 	os << pr.first << "," << pr.second;
