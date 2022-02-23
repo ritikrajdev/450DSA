@@ -29,7 +29,7 @@ public:
         this->nums = nums;
         this->k = k;
         this->n = nums.size();
-        this->memory = vector<vector<int>> (501, vector<int>(1501, -1));
+        this->memory = vector<vector<int>> (n+1, vector<int>(k+1, -1));
         return solve(k);
     }
 };
